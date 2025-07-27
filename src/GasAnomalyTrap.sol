@@ -2,13 +2,13 @@
 pragma solidity ^0.8.20;
 
 interface ITrap {
-    // Обрати внимание: обе функции с правильными модификаторами view/pure
+    
     function collect() external view returns (bytes memory);
     function shouldRespond(bytes[] calldata data) external pure returns (bool, bytes memory);
 }
 
 contract GasAnomalyTrap is ITrap {
-    uint256 public constant thresholdPercent = 50; // Если gasUsed вырос более чем на 50%
+    uint256 public constant thresholdPercent = 10; 
 
     function collect() external view override returns (bytes memory) {
         return abi.encode(block.gaslimit, block.gaslimit - gasleft());
