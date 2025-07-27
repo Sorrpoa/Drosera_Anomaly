@@ -15,10 +15,9 @@ Encodes current block number, gas limit, and gas used:
 
 ```solidity
 uint256 usedGas = block.gaslimit - gasleft();
-return abi.encode(block.number, block.gaslimit, usedGas);```
-
+return abi.encode(block.number, block.gaslimit, usedGas);
 
 ## ✍️ Author
+Operator: 0x81303871d7bB5bBF9981636E797DBeC77bA276e5
 
-- Operator: `0x81303871d7bB5bBF9981636E797DBeC77bA276e5`
-- GitHub: [Sorrpoa](https://github.com/Sorrpoa)
+GitHub: Sorrpoa
