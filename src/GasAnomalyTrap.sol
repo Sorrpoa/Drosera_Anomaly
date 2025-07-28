@@ -8,7 +8,7 @@ interface ITrap {
 }
 
 contract GasAnomalyTrap is ITrap {
-    uint256 public constant thresholdPercent = 10; 
+    uint256 public constant thresholdPercent = 1; 
 
     function collect() external view override returns (bytes memory) {
         return abi.encode(block.gaslimit, block.gaslimit - gasleft());
